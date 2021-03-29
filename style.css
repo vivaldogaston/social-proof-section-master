@@ -1,0 +1,158 @@
+*{
+    font-family:"Spartan";
+}
+@font-face{
+    font-family:"Spartan";
+    src: url("Spartan-VariableFont_wght.ttf");
+
+}
+body{
+    background-image: url("images/bg-pattern-top-desktop.svg"),url("images/bg-pattern-bottom-desktop.svg");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
+h1{
+    font-weight: 700;
+}
+.top{
+    display:flex;
+    margin:100px; 
+}
+.text,#ratings{
+    border: solid 0px;
+
+}
+.text{
+    width: 360px;
+    
+    color:hsl(300, 43%, 22%);
+    font-size: 20px;
+    
+}
+.text h3{
+    font-size: 12px;
+    line-height: 20px;
+    color:hsl(303, 10%, 53%);
+}
+#ratings{
+   flex:3;
+    padding:10px;
+    padding-left: 200px;
+    
+    
+}
+.rating{
+    color:hsl(300, 43%, 22%);
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    padding-top: 12px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    
+    font-weight: 700;
+}
+
+label{
+ margin-left: 15px;
+}
+.card{
+    background:hsl(300, 43%, 22%);
+    color: hsl(300, 24%, 96%);
+    
+    width: 270px;
+    height: 150px;
+    border-radius: 10px;
+    border:solid 1px;
+    padding:40px;
+    
+}
+
+.card-pic{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+   
+}
+.card label{
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 5px;
+    
+    
+}
+.card p{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+}
+#cards{
+    margin-left: 100px; margin-right: 100px;display: flex;
+}
+#ratings .rating:nth-child(2){
+    margin-left: 40px;
+}
+#ratings .rating:nth-child(3){
+    margin-left: 80px;
+}
+#cards .card:nth-child(2){
+    margin-left: 20px;margin-top: 20px;
+}
+#cards .card:nth-child(3){
+    margin-left: 20px;margin-top: 40px;
+}
+@media screen and (max-width:400px){
+    body{
+        height: 100vh;
+        width: 100vw;
+        padding: 5px;
+        display: grid;
+        
+    }
+    .top{
+        margin: 0;
+        margin-top: 50px;
+        flex-direction: column;
+        text-align: center;
+    }
+.text{width: 350px;}
+    #ratings{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 350px;
+        
+    }
+    #ratings .rating:nth-child(2), #ratings .rating:nth-child(3){
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+    .rating{
+        width: auto;
+        margin-bottom: 5px;
+        padding: 25px;
+    }
+    .rating span:nth-child(5)::after{
+        content: "\A\A";
+        white-space: pre;
+    }
+    #cards .card:nth-child(2), #cards .card:nth-child(3){
+        margin: 0px 0px 5px 0px;
+        
+    }
+    
+    #cards{
+        display: block;
+        width: 350px;
+        height: auto;
+        margin: 10px 0px;
+    }
+    .card{
+        margin: 0px;
+        margin-bottom:5px ;
+        width: auto;
+    }
+}
